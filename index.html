@@ -1,1 +1,121 @@
-hello world
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Who are you? </title>
+</head>
+
+<body>
+  <div class="jumbotron" style="background-size: cover; background-position: top center; background: linear-gradient(rgba(217, 210, 233, 0.68), rgba(217, 210, 233, 0.68)), url(&quot;https://3f4c2184e060ce99111b-f8c0985c8cb63a71df5cb7fd729edcab.ssl.cf2.rackcdn.com/media/16962/cocktailbanner.jpg&quot;);">
+    <div class="container">
+      <h1 style="color:;text-shadow: 1px 1px gray;" class="jumbotronic">Who are you?</h1>
+      <h6 style=" text-shadow: 1px 1px gray; color:">Time to find out what kind of student you are, based on your alcohol preferences.</h6>
+    </div>
+  </div>
+
+  <form class="bsr-form " action="">
+    <div class="form-group">
+      <label for="tex-input">Name</label>
+      <input name="text-input" type="text" class="form-control" id="name-text">
+    </div>
+    <div class="form-group">
+      <label for="checkboxes">Favourite day of the week?</label>
+      <select class="form-control" id="favDay">
+        <option>Margarita Mondays</option>
+        <option>Tequila Tuesdays</option>
+        <option>Wine Wednesdays</option>
+        <option>Thirsty Thursdays</option>
+        <option>Fireball Fridays</option>
+        <option>Sloshed Saturdays</option>
+        <option>Sangria Sundays</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="tex-input">Alchol you will no longer touch?</label>
+      <input name="text-input" type="text" class="form-control" id="notouch-text">
+    </div>
+    <div class="form-group">
+      <label for="radios">What's your favourite type of wine?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radio" id="radio-wine-white" value="radio1" checked="checked">
+          White
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radio" id="radio-wine-red" value="radio2">
+          Red
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radio" id="radio-wine-rose" value="radio3">
+          Rose
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radio" id="radio-wine-sparkling" value="radio3">
+          Sparkling
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="radios">Favourite Brunch Cocktail?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radios" id="brunch-bloody-mary" value="radio1" checked="checked">
+          Bloody Mary
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radios" id="brunch-mimosa" value="radio2">
+          Mimosa
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radios" id="brunch-screwdriver" value="radio3">
+          Screwdriver
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="bsr-radios" id="brunch-irish-coffee" value="radio3">
+          Irish Coffee
+        </label>
+      </div>
+    </div>
+    <button type="reset" class="btn btn-default" id="bsr-clear-button">Clear</button>
+    <button type="button" class="btn btn-primary" id="bsr-submit-button">Submit</button>
+  </form>
+  </div>
+
+  <div class="container">
+    <p id="drink-top-line" class="lead"> Drink Top Line. </p>
+    <p id="drink-body"> Drink Body. </p>
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <hr>
+      <p class = "text-muted">
+        Don't drink and drive!
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" type="text/javascript"></script>
+
+</body>
+</html>
