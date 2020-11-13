@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Calculator tool</title>
+    <title>Strategy tool</title>
 
     <style>
         .center {
@@ -55,46 +55,49 @@
             <a href="calculator.html" class="btn btn-secondary btn-lg">Calculate tool</a>
         </div>
 
-        <div id="alerts">
+        <div id="alerts" style="margin-top: 20px;">
             <div class="alert alert-warning" id="poke_alert" style="display:none;" role="alert">
                 Please choose your Pokemon.
               </div>
-              <div class="alert alert-warning" id="cp_alert" style="display:none;" role="alert">
-                Please enter valid CP value.
-              </div>
         </div>
+
         <div class="input-group" style="margin-top: 20px;">
-          <select class="custom-select" id="select_pokemon_calc" aria-label="Example select with button addon">
-            <option selected value=0>Choose your Pokemon... </option>
-          </select>
+            <select class="custom-select" id="select_pokemon_calc" aria-label="Example select with button addon">
+                <option selected value=0>Choose the pokemon you are fighting against... </option>
+            </select>
+            <div class="input-group-append">
+              <button id="strategy_button" class="btn btn-outline-secondary" onclick="calculateStrategy()" type="button">Submit</button>
+            </div>
         </div>
 
-        <div class="input-group mb-3">
-          <input id="cp_input_box" class="form-control form-control-md" type="text" style= "margin-top: 10px;" placeholder="Enter Pokemon CP...">
+        <div class="row" style="margin-top: 20px;">
 
-          <div class="input-group-append">
-              <button class="btn btn-outline-secondary" id= "calculate_button" style= "margin-top: 10px;" type="button" onclick="selectedPoke()">Calculate CP</button>
-          </div>
-        </div>
-
-        <div class="row" style="margin-top: 10px;">
-            <div class="col-md-6" id="old_poke">
+            <div class="col-md-6" id="opponent_poke">
+                <h5 class="card-title">Fighting Against</h5>
                 <div class="card">
                     <div class="card-body">
-                      <!-- user Pokemon goes here -->
+                        <!-- fighting against Pokemon goes here -->
                     </div>
                 </div>
-            </div>
+            </div><!-- col-md-6 -->
 
-
-            <div class="col-md-6" id="next_evol">
+            <div class="col-md-6" id="recommended_poke">
+                <h5 class="card-title">Recommended Pokemon</h5>
                 <div class="card">
                     <div class="card-body">
-                      <!-- next evolution of user Pokemon goes here -->
+                        <!-- Recommended Pokemon goes here -->
                     </div>
-                  </div>
-            </div><!-- col-md-3 -->
+                </div>
+            </div><!-- col-md-6 -->
+        
+        </div> <!-- row -->
+
+        <hr>
+        <h5 style="margin-top: 20px;">Alternate Pokemons</h5>
+        <div class="row" id="alternate_pokemons">
+            <!-- alternate pokemons go here -->
         </div><!-- row -->
+
     </div><!-- container -->
 
 
@@ -109,7 +112,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="main.js" type="text/javascript"></script>
 
-    <script> loadSelectPoke(); </script>
+    <script> 
+        loadSelectPoke(); 
+    </script>
 
 
 </body>

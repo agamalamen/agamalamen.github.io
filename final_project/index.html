@@ -23,7 +23,9 @@
 <body>
   <div class="container">
     <img src="images/pokemon_logo.png" class="center" style="padding-top: 30px" alt="Responsive image">
-<input class="form-control form-control-lg" type="text" style="margin: 10px;" placeholder="Search for pokemons..">
+    <form action="index.html" method="get">
+      <input class="form-control form-control-lg" name="pokemon" type="text" style="margin: 10px;" placeholder="Search for pokemons..">
+    </form>
 
 <div class="text-center">
   <a href="index.html" class="btn btn-info btn-lg">
@@ -39,9 +41,8 @@
       Battle Recommender
     </button>
 
-    <!-- Dropdown for the menu comparisons> </!-->
+    <!-- Dropdown for the menu comparisons -->
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="strategy.html?strategy=overall">Overall Strategy</a>
       <a class="dropdown-item" href="strategy.html?strategy=offensive">Offensive Strategy</a>
       <a class="dropdown-item" href="strategy.html?strategy=defensive">Defensive Strategy</a>
     </div>
@@ -50,6 +51,7 @@
 </div>
 
     <div class="row" id="pokemons-div" style="padding-top: 20px;">
+      <!-- pokemons directory goes here -->
     </div>
 
   </div><!-- container -->
